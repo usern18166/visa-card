@@ -128,8 +128,9 @@
     color: black;
     font-size: 13px;
     font-weight: bold;
-    background-color: white;
-    border: 0.5px solid gray;
+    background-color: rgb(247, 244, 244);
+    border: 0.5px solid rgb(199, 198, 198);
+    border-radius: 3px;
 
 }
 

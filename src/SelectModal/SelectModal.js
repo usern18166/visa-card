@@ -11,16 +11,16 @@ const SelectModal = () => {
       <div id="demo-modal1" className="modal1">
         <div className="modal__content1">
           <div className="itemCard">
-            <h3>Micple To Micple</h3>
+            <h4 className="cardItem">Micple To Micple</h4>
           </div>
           <div className="itemCard">
-            <h3>Account To Card</h3>
+            <h4 className="cardItem">Account To Card</h4>
           </div>
           <div className="itemCard">
-            <h3>Beneficiary</h3>
+            <h4 className="cardItem">Beneficiary</h4>
           </div>
           <div className="itemCard">
-            <h3>Exchange</h3>
+            <h4 className="cardItem">Exchange</h4>
           </div>
           <a href="#" className="modal__close1">
             &times;
