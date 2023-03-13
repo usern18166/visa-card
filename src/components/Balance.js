@@ -6,10 +6,10 @@ import Modal from "../modal/Modal";
 import SelectModal from "../SelectModal/SelectModal";
 
 const Balance = () => {
-  const [select, setSelect] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleClick = () => {
-    setSelect(!select);
+    setOpen(!open); 
   };
 
   return (
@@ -32,9 +32,9 @@ const Balance = () => {
         <div>
           {/* trans */}
           <div
+            onClick={handleClick}
             style={{ marginLeft: "-30px" }}
             className={balance.transfer}
-            onClick={handleClick}
           >
             <p style={{ fontWeight: "500" }}>Transfer</p>
           </div>
@@ -58,11 +58,7 @@ const Balance = () => {
         }}
       >
         <div className={balance.btn1}>
-          <h3 className={balance.modalBtn}
-            style={{
-            
-            }}
-          >
+          <h3 className={balance.modalBtn} style={{}}>
             <div
               style={{
                 display: "flex",
@@ -101,20 +97,18 @@ const Balance = () => {
           </h3>
         </div>
 
-        {select && (
-          <div className={balance.btn2}>
-            <h3
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                marginTop: "10px",
-                fontSize: "13px",
-              }}
-            >
-              <SelectModal />
-            </h3>
+        <div className="">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "10px",
+              fontSize: "13px",
+            }}
+          >
+            <SelectModal open={open} />
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

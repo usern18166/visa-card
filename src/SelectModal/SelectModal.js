@@ -1,12 +1,20 @@
 import React from "react";
 import "./selectModal.css";
 
-const SelectModal = () => {
+const SelectModal = ({ open }) => {
   return (
     <div>
-      <div className="wrapper1">
+      {/* <div className="wrapper1">
         <a href="#demo-modal1">Select Type</a>
-      </div>
+      </div> */}
+      <a style={{textDecoration:"none"}} href={`${open ? "#demo-modal1" : '#'}`}>
+        <button
+          className={`wrapper1 btn2 ${open ? 'active' : 'disable'}`}
+          // disabled={open}
+        >
+          Select Type
+        </button>
+      </a>
 
       <div id="demo-modal1" className="modal1">
         <div className="modal__content1">

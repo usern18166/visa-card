@@ -46,16 +46,32 @@
 } */
 
 .btn2 {
-    width: 110px;
+    width: 210px;
     height: 40px;
-    cursor: pointer;
     color: black;
     font-size: 13px;
     font-weight: bold;
     border: 0.5px solid rgb(175, 172, 172);
     position: relative;
     border-radius: 3px;
+    margin-right: -100px;
+
 }
+
+
+
+.disable {
+    opacity: .3;
+    cursor: not-allowed;
+    backdrop-filter: blur(20px) saturate(120%) contrast(200%);
+}
+
+.active {
+    opacity: 1;
+    cursor: pointer;
+    backdrop-filter: none;
+}
+
 
 /* 
 .btn2:hover {
