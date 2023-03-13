@@ -1,7 +1,7 @@
 import React from "react";
 import card from "./card.module.css";
 import chip from "../assets/images/chip.png";
-import visa from "../assets/images/visa.png";
+import master from "../assets/images/mastercard.png";
 import logo from "../assets/images/micple.png";
 import pattern from "../assets/images/pattern.png";
 import Balance from "./Balance";
@@ -12,28 +12,32 @@ const Card = () => {
   return (
     <div>
       <div
+       className={card.container}
         style={{
           display: "flex",
           justifyContent: "space-around",
           height: "400px",
-          // backgroundColor: "whitesmoke",
+          
         }}
       >
         <div className={card.balance}>
           <Balance />
         </div>
-        <div style={{ width: "400px" }}>
+
+
+
+        <div style={{ width: "400px", marginRight: "250px" }}>
           <div className={card.card}>
             <div className={card.card_inner}>
               <div className={card.front}>
                 <img src={logo} className={card.map_img} />
                 <div className={card.row}>
                   <img src={chip} width="40px" />
-                  <img src={visa} width="50px" />
                 </div>
                 <div
                   style={{
-                    fontSize: "25px",
+                    fontSize: "20px",
+                    marginTop: "10px",
                   }}
                   className={card.rowNumber}
                 >
@@ -42,19 +46,22 @@ const Card = () => {
                   <p>8252</p>
                   <p>6420</p>
                 </div>
-                <div
-                  style={{ marginTop: "25px", fontSize: "12px" }}
-                  className={card.row}
-                >
-                  <p style={{ fontWeight: "bold" }}>HOLDER NAME</p>
-                  <p style={{ fontWeight: "bold" }}>VALID THRU</p>
-                </div>
-                <div
-                  style={{ marginTop: "-10px", fontSize: "17px" }}
-                  className={card.row}
-                >
-                  <p style={{ fontWeight: "bold" }}>RASHED ISLAM</p>
-                  <p style={{ fontWeight: "bold" }}>11 / 27</p>
+                <div style={{ marginTop: "15px" }} className={card.row}>
+                  <div>
+                    <p style={{ fontWeight: "bold", fontSize: "14px" }}>
+                      HOLDER NAME
+                    </p>
+                    <p style={{ fontWeight: "bold" }}>
+                      <span>Expires:</span> 11 / 27
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      style={{ marginTop: "10px" }}
+                      src={master}
+                      width="60px"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -75,7 +82,7 @@ const Card = () => {
                 </div>
                 <div style={{ marginTop: "-20px" }} className={card.row}>
                   <p>CUSTOMER SIGNATURE</p>
-                  <img src={visa} width="60px" />
+                  <img src={master} width="70px" />
                 </div>
               </div>
             </div>
@@ -110,7 +117,7 @@ const Card = () => {
       <div style={{ padding: "0px 20px 0px 20px", marginTop: "30px" }}>
         <Input />
       </div>
-      <div style={{ padding: "0px 20px 0px 20px", marginTop: "40px" }}>
+      <div style={{ padding: "0px 20px 0px 20px", marginTop: "100px" }}>
         <History />
       </div>
     </div>

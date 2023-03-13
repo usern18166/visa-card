@@ -1,0 +1,66 @@
+/* If you like this, be sure to ❤️ it. */
+.wrapper1 {
+
+    /* This part is important for centering the content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.wrapper1 a {
+    display: inline-block;
+    text-decoration: none;
+
+    color: #585858;
+}
+
+.modal1 {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 300;
+    right: 0;
+    left: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s;
+    border: .5px solid rgb(229, 220, 220);
+    margin-top: -30px;
+}
+
+.modal1:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal__content1 {
+    border-radius: 4px;
+    position: relative;
+    width: 200px;
+    background: #fff;
+    padding: 1em 2em;
+}
+
+.modal__footer1 {
+    text-align: right;
+
+}
+
+.modal__close1 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #585858;
+    text-decoration: none;
+}
+
+.itemCard {
+
+    display: flex;
+    justify-content: center;
+    border: 0.5px solid rgb(195, 191, 191);
+    border-radius: 3px;
+
+}

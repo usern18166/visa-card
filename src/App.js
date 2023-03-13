@@ -1,10 +1,17 @@
 import Card from "./components/Card";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import PdfSearch from "./components/PdfSearch";
+import Modal from "./modal/Modal";
 
 function App() {
   return (
-    <div>
-      <Card />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Card />} />
+        <Route path="/pdfSearch" element={<PdfSearch />} />
+        <Route path="/modal" element={<Modal />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

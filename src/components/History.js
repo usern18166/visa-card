@@ -17,7 +17,7 @@ const History = () => {
         <th>Date</th>
         <th>Beneficiary</th>
         <th>Amount</th>
-        <th>Preprocess</th>
+        <th>Description</th>
         <th>Status</th>
       </tr>
 

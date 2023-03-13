@@ -1,65 +1,140 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import input from "./input.module.css";
+import { Link } from "react-router-dom";
 
 const Input = () => {
-  const [searchDate, setSearchDate] = useState("");
-  const [showData, setShowData] = useState(false);
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [results, setResults] = useState([]);
+  const [data, setData] = useState([]);
+  const [searchResult, setSearchResult] = useState(false);
 
-  const handleDateSearch = (event) => {
-    if (event.target.value === "") {
-      setShowData(false);
-    }
-    const input = event.target;
-    const date = new Date(input.value);
-    const month = (date.getUTCMonth() + 1).toString().padStart(2, "0");
-    const day = date.getUTCDate().toString().padStart(2, "0");
-    const year = date.getUTCFullYear();
-    setSearchDate(month + "/" + day + "/" + year);
+  const handleDateChange = (e) => {
+    setStartDate(e.target.value);
   };
+
+  useEffect(() => {
+    fetch("/history.json")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
+
+  function searchByDateRange(startDate, endDate) {
+    const filteredData = data.filter((item) => {
+      const date = new Date(item.date);
+      return date >= new Date(startDate) && date <= new Date(endDate);
+    });
+    setResults(filteredData);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    searchByDateRange(startDate, endDate);
+    setSearchResult(startDate, endDate);
+  };
+
   return (
-    <div style={{ display: "flex", justifyContent: "end" }}>
-      <div>
-        <div className={input.searchField}>
-          <input
-            type="date"
-            className={input.search}
-            onChange={handleDateSearch}
-          />
-        </div>
-        <label className={input.label} htmlFor="Start">
-          Start Date
-        </label>
+    <>
+      <div style={{ display: "flex", justifyContent: "end" }}>
+        <form style={{ display: "flex" }} onSubmit={handleSubmit}>
+          <div>
+            <div className={input.searchField}>
+              <input
+                lang="fr"
+                placeholder="DD/MM/YYYY"
+                style={{ textTransform: "uppercase" }}
+                type="date"
+                className={input.search}
+                id="start-date"
+                value={startDate}
+                onChange={handleDateChange}
+              />
+            </div>
+            <label className={input.label} htmlFor="Start">
+              Start Date
+            </label>
+          </div>
+
+          <div className={input.to}>
+            <p>To</p>
+          </div>
+
+          <div>
+            <div className={input.searchField}>
+              <input
+                lang="fr"
+                style={{ textTransform: "uppercase" }}
+                type="date"
+                className={input.search}
+                id="end-date"
+                value={endDate}
+                onChange={(e) => setEndDate(e.target.value)}
+              />
+            </div>
+            <label className={input.label} htmlFor="Start">
+              End Date
+            </label>
+          </div>
+          <div className={input.searchField}>
+            <input
+              type="text"
+              placeholder="Select Reports"
+              className={input.searchReport}
+            />
+          </div>
+          <div>
+            <button type="submit" className={input.btnSearch}>
+              Search
+            </button>
+          </div>
+        </form>
       </div>
 
-      <div className={input.to}>
-        <p>To</p>
+      <div
+        style={{
+          display: searchResult ? "block" : "none",
+        }}
+      >
+        <table style={{ marginTop: "40px" }}>
+          <tr>
+            <th>Transaction ID</th>
+            <th>Date</th>
+            <th>Beneficiary</th>
+            <th>Amount</th>
+            <th>Preprocess</th>
+            <th>Status</th>
+          </tr>
+
+          {results.map((historie) => (
+            <tr className={input.dataStyle} key={historie.id}>
+              <td>{historie.transactionId}</td>
+              <td>{historie.date}</td>
+              <td>{historie.beneficiary}</td>
+              <td>${historie.amount}</td>
+              <td>{historie.preprocess}</td>
+              <td>{historie.status}</td>
+            </tr>
+          ))}
+        </table>
       </div>
 
-      <div>
-        <div className={input.searchField}>
-          <input
-            type="date"
-            className={input.search}
-            onChange={handleDateSearch}
-          />
+      {searchResult && (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Link
+            style={{ textDecoration: "none" }}
+            to={"/pdfSearch"}
+            state={results}
+          >
+            <button className={input.download}>Download</button>
+          </Link>
         </div>
-        <label className={input.label} htmlFor="Start">
-          End Date
-        </label>
-      </div>
-      <div className={input.searchField}>
-        <input
-          type="text"
-          placeholder="Select Reports"
-          className={input.searchReport}
-          onChange={handleDateSearch}
-        />
-    
-      </div>
-      <div>
-        <button className={input.btnSearch}>Search</button>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 

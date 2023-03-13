@@ -1,0 +1,46 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 10px;
+}
+
+
+th {
+    border: 1px solid #dddddd;
+    /* text-align: left; */
+    text-align: center;
+    padding: 8px;
+
+
+
+}
+
+
+td {
+    border: 1px solid #dddddd;
+    /* text-align: left; */
+    text-align: center;
+
+}
+
+tr {
+
+    padding: 8px;
+
+}
+
+tr:nth-child(even) {
+    background-color: white;
+
+}
+
+.dataStyle {
+    height: 37px;
+}
+
+.download:hover{
+    background-color: #0048ba;
+    color: white;
+    border: none;
+}
