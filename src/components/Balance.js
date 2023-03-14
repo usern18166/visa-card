@@ -8,9 +8,13 @@ import SelectModal from "../SelectModal/SelectModal";
 const Balance = () => {
   const [open, setOpen] = useState(false);
 
+
+
   const handleClick = () => {
-    setOpen(!open); 
+    setOpen(!open);
+
   };
+
 
   return (
     <div
@@ -106,7 +110,10 @@ const Balance = () => {
               fontSize: "13px",
             }}
           >
-            <SelectModal open={open} />
+            <SelectModal
+              open={open}
+              
+            />
           </div>
         </div>
       </div>

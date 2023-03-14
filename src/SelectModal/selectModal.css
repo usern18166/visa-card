@@ -8,12 +8,6 @@
 
 }
 
-.wrapper1 a {
-    display: inline-block;
-    text-decoration: none;
-
-    color: #585858;
-}
 
 .modal1 {
     visibility: hidden;
@@ -60,13 +54,19 @@
 
     display: flex;
     justify-content: center;
-    border: 0.5px solid rgb(195, 191, 191);
-    border-radius: 3px;
+    border: 0.5px solid rgb(224, 221, 221);
+    height: 35px;
+    text-align: center;
+    width: 210px;
+    align-items: center;
+    margin-left: -135px;
 
 }
 
 .cardItem {
-    color: rgb(74, 70, 70);
+    color: black;
+    font-size: 12px;
+
 }
 
 .btn2 {
@@ -75,11 +75,12 @@
     color: black;
     font-size: 13px;
     font-weight: bold;
-    border: 0.5px solid rgb(175, 172, 172);
+    border: 0.5px solid rgb(211, 209, 209);
     position: relative;
     border-radius: 3px;
     margin-right: -100px;
     text-decoration: none;
+    background-color: rgb(224, 224, 226);
 
 }
 
