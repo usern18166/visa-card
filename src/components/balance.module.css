@@ -35,15 +35,35 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: -15px;
+    /* margin-top: -15px; */
+    gap: 5px;
+    margin-top: 10px;
+
 }
 
-/* 
-.btn1:hover {
-    background-color: #0048ba;
-    color: white;
-    border: none;
-} */
+.addBenefic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    height: 40px;
+    border: 0.5px solid rgb(224, 224, 226);
+    background-color: rgb(224, 224, 226);
+    border-radius: 2px;
+  
+
+}
+
+.number {
+    color: black;
+    height: 40px;
+    border: 0.5px solid rgb(224, 224, 226);
+    background-color: rgb(224, 224, 226);
+    border-radius: 2px;
+
+
+}
+
 
 .btn2 {
     width: 210px;
@@ -113,9 +133,6 @@
     font-size: 15px;
 }
 
-.number {
-    color: rgb(88, 86, 86);
-}
 
 .modalBtn {
 

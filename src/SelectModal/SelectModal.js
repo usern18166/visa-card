@@ -19,11 +19,9 @@ const SelectModal = ({ open }) => {
         <button
           style={
             isOpen
-              ? { backgroundColor: "#0048ba",color:"white" }
-              : { backgroundColor: "rgb(224, 224, 226)",color:"black" }
-             
+              ? { backgroundColor: "#0048ba", color: "white" }
+              : { backgroundColor: "rgb(224, 224, 226)", color: "black" }
           }
-          
           className={`wrapper1 btn2 ${open ? "active" : "disable"}`}
           onClick={toggleDropdown}
         >
@@ -34,18 +32,10 @@ const SelectModal = ({ open }) => {
       {isOpen ? (
         <div style={{ position: "absolute" }}>
           <div style={{ marginTop: "13px" }}>
-            <div className="itemCard">
-              <h4 className="cardItem">Micple To Micple</h4>
-            </div>
-            <div className="itemCard">
-              <h4 className="cardItem">Account To Card</h4>
-            </div>
-            <div className="itemCard">
-              <h4 className="cardItem">Beneficiary</h4>
-            </div>
-            <div className="itemCard">
-              <h4 className="cardItem">Exchange</h4>
-            </div>
+            <button className="itemCard">Micple To Micple</button>
+            <button className="itemCard">Account To Card</button>
+            <button className="itemCard">Beneficiary</button>
+            <button className="itemCard">Exchange</button>
           </div>
         </div>
       ) : (

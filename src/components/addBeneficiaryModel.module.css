@@ -1,17 +1,8 @@
-.wrapper {
-  height: 10px;
-  /* This part is important for centering the content */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* End center */
-}
 
-.wrapper a {
-  display: inline-block;
-  text-decoration: none;
-  padding: 15px;
-  color: #585858;
+
+.wrapper11 {
+  background-color: #3b0606;
+
 }
 
 .modal1 {
@@ -25,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
- background-color: aqua;
+  background-color: aqua;
   transition: all .4s;
 }
 
@@ -43,10 +34,11 @@
   padding: 1em 2em;
 }
 
- .modal__footer {
+.modal__footer {
   text-align: right;
 
 }
+
 .modal__close {
   position: absolute;
   top: 10px;

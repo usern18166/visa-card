@@ -5,15 +5,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    width: 190px;
+    height: 40px;
+    border: 0.5px solid rgb(224, 224, 226);
+    background-color: rgb(224, 224, 226);
+    cursor: pointer;
 }
 
-.wrapper11 a {
-    display: inline-block;
-    text-decoration: none;
 
-    color: #585858;
-}
+
 
 .modal11 {
     visibility: hidden;
@@ -54,4 +54,92 @@
     right: 10px;
     color: #585858;
     text-decoration: none;
+}
+
+/* add beneficiary */
+
+
+.bankDetails {
+    width: 400px;
+    background-color: rgb(224, 224, 226);
+    margin-top: -19px;
+    margin-left: -213px;
+
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 2px;
+    padding: 5px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+.details p {
+    font-weight: bold;
+    font-size: 14px;
+    color: gray;
+}
+
+.bankAccount {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -212px;
+    border: 1px solid rgb(224, 224, 226);
+    width: 400px;
+    background-color: rgb(245, 245, 247);
+}
+
+/* selection  */
+.select {
+    /* Reset Select */
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    /* flex: 1; */
+    padding: 0 1em;
+    color: #fff;
+    background-color: var(--darkgray);
+    background-image: none;
+    cursor: pointer;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+    display: none;
+}
+
+.selectOption {
+    width: 369px;
+    border: none;
+    border-bottom: 1px solid rgb(173, 171, 171);
+    background-color: rgb(245, 245, 247);
+
+    outline: none;
+
+}
+
+.questions {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-top: -10px;
+    gap: 5px;
+    margin-left: 23px;
+    color: rgb(120, 139, 215);
+    font-weight: 500;
+}
+
+.nextBtn{
+    text-transform: uppercase;
+    background-color: #0048ba;
+    color: white;
+    width: 150px;
+    height: 35px;
+    border: #0048ba;
+   cursor: pointer;
 }

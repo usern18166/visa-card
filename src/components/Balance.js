@@ -8,13 +8,9 @@ import SelectModal from "../SelectModal/SelectModal";
 const Balance = () => {
   const [open, setOpen] = useState(false);
 
-
-
   const handleClick = () => {
     setOpen(!open);
-
   };
-
 
   return (
     <div
@@ -62,43 +58,22 @@ const Balance = () => {
         }}
       >
         <div className={balance.btn1}>
-          <h3 className={balance.modalBtn} style={{}}>
-            <div
-              style={{
-                display: "flex",
-                padding: "10px",
-                borderRadius: "2px",
-              }}
-            >
-              <MdOutlineLibraryAdd
-                style={{ marginTop: "2px", fontSize: "15px" }}
-              />
-              <AddBeneficiaryModel />
-            </div>
+      
+            <AddBeneficiaryModel />
+        
 
-            <hr
-              style={{
-                height: "20px",
-                marginTop: "9px",
-                marginLeft: "5px",
-                fontWeight: "bold",
-                border: "1px solid black",
-              }}
-            />
-            <span
-              className={balance.number}
-              style={{
-                cursor: "pointer",
-                fontWeight: "bold",
-                // marginTop: "2px",
-                marginLeft: "4px",
-                fontSize: "15px",
-                padding: "10px",
-              }}
-            >
-              <Modal />
-            </span>
-          </h3>
+          {/* <hr
+            style={{
+              height: "20px",
+              marginTop: "9px",
+              marginLeft: "5px",
+              fontWeight: "bold",
+              border: "1px solid black",
+            }}
+          /> */}
+          <button className={balance.number}>
+            <Modal />
+          </button>
         </div>
 
         <div className="">
@@ -110,10 +85,7 @@ const Balance = () => {
               fontSize: "13px",
             }}
           >
-            <SelectModal
-              open={open}
-              
-            />
+            <SelectModal open={open} />
           </div>
         </div>
       </div>
