@@ -1,26 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "./modal.css";
 
 const Modal = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div>
-      <div class="wrapper10">
-        <a href="#demo-modal10">(10)</a>
-      </div>
+      <button
+        className="countNumberBtn"
+        style={
+          isOpen
+            ? { backgroundColor: "#0048ba", color: "white" }
+            : { backgroundColor: "rgb(224, 224, 226)", color: "black" }
+        }
+        // className={`wrapper1 btn2 ${open ? "active" : "disable"}`}
+        onClick={toggleDropdown}
+      >
+        10
+      </button>
 
-      <div id="demo-modal10" class="modal10">
-        <div class="modal__content10">
-          <h1>CSS Only Modal</h1>
-
-          <p>
-            10
-          </p>
-
-          <a href="#" class="modal__close10">
-            &times;
-          </a>
+      {isOpen ? (
+        <div style={{ position: "absolute" }}>
+          <div style={{ marginTop: "13px" }}>
+           <h4>number</h4>
+          </div>
         </div>
-      </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

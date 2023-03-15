@@ -56,3 +56,9 @@
     color: #585858;
     text-decoration: none;
 }
+
+.countNumberBtn{
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}

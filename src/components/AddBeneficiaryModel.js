@@ -25,11 +25,7 @@ const AddBeneficiaryModel = () => {
     setOpenDetails(!openDetails);
   };
 
-  const options = [
-    { label: "Fruit", value: "fruit" },
-    { label: "Vegetable", value: "vegetable" },
-    { label: "Meat", value: "meat" },
-  ];
+
 
   return (
     <div>
@@ -105,8 +101,8 @@ const AddBeneficiaryModel = () => {
               <select className="selectOption" style={{ marginLeft: "8px" }}>
                 {country.map((item) => (
                   <>
+                    <img src={item?.flags.png} alt="" />
                     <option className="option" value="1">
-                      <img src={item?.flags.png} alt="" />
                       {item?.name?.common}
                     </option>
                   </>
@@ -121,7 +117,6 @@ const AddBeneficiaryModel = () => {
                   color: "gray",
                   marginTop: "19px",
                   marginRight: "140px",
-
                 }}
               >
                 Select bank account currency
@@ -137,7 +132,7 @@ const AddBeneficiaryModel = () => {
           {openDetails && (
             <div className="questions">
               <AiOutlineQuestionCircle />
-              <p >What are my currency options?</p>
+              <p>What are my currency options?</p>
             </div>
           )}
           {openDetails && <hr style={{ margin: "10px" }} />}
@@ -145,7 +140,7 @@ const AddBeneficiaryModel = () => {
           {openDetails && (
             <div style={{ padding: "0px 0px 10px 0px" }}>
               <button className="nextBtn">
-                next <IoMdArrowDropdown style={{marginTop:"5px"}} />
+                next <IoMdArrowDropdown style={{ marginTop: "5px" }} />
               </button>
             </div>
           )}

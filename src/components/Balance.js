@@ -58,9 +58,7 @@ const Balance = () => {
         }}
       >
         <div className={balance.btn1}>
-      
-            <AddBeneficiaryModel />
-        
+          <AddBeneficiaryModel />
 
           {/* <hr
             style={{
@@ -71,9 +69,9 @@ const Balance = () => {
               border: "1px solid black",
             }}
           /> */}
-          <button className={balance.number}>
+          <div>
             <Modal />
-          </button>
+          </div>
         </div>
 
         <div className="">

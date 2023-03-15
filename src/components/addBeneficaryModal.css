@@ -132,6 +132,7 @@ select::-ms-expand {
     margin-left: 23px;
     color: rgb(120, 139, 215);
     font-weight: 500;
+    cursor: pointer;
 }
 
 .nextBtn{
