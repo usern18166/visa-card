@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./modal.css";
+// import { HiBuildingLibrary } from "react-icons/b";
 
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    fetch("/list.json")
+      .then((res) => res.json())
+      .then((data) => setList(data));
+  }, []);
+
   return (
     <div>
       <button
@@ -23,9 +31,22 @@ const Modal = () => {
       </button>
 
       {isOpen ? (
-        <div style={{ position: "absolute" }}>
-          <div style={{ marginTop: "13px" }}>
-           <h4>number</h4>
+        <div style={{ position: "absolute", marginLeft: "-473px" }}>
+          <div
+            className="accountCard"
+            style={{ marginTop: "13px", padding: "5px" }}
+          >
+            {list.map((item) => (
+              <div className="listCard">
+                <div>
+                  {/* <HiBuildingLibrary /> */}
+                </div>
+                <div>
+                  <h3>{item.holder_name}</h3>
+                  <p>{item.account_number}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       ) : (

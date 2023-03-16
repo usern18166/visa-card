@@ -123,8 +123,8 @@ const AddBeneficiaryModel = () => {
               </label>
               <br />
               <select className="selectOption" style={{ marginLeft: "8px" }}>
-                <option value="1">BDT</option>
-                <option value="2">USD</option>
+                <option value="1">USD</option>
+                <option value="2">BDT</option>
                 <option value="3">URO</option>
               </select>
             </div>

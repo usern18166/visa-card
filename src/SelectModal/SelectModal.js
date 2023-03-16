@@ -3,7 +3,6 @@ import "./selectModal.css";
 
 const SelectModal = ({ open }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleDropdown = () => {
     if (open) {
       setIsOpen(!isOpen);

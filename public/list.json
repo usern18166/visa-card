@@ -1,0 +1,62 @@
+[
+  {
+    "id": "01",
+    "holder_name": "Muslima",
+    "account_number": "X-345345654645",
+    "currency": ["BDT", "USD", "URO"],
+    "bank_name": "Royal Bank of Bangladesh",
+    "branch_name": "Nizam Road Branch Chittagong",
+    "status": "approved",
+    "position":"Marketer"
+  },
+  {
+    "id": "02",
+    "holder_name": "Naim",
+    "account_number": "X-34534456546",
+    "currency": ["BDT", "USD", "URO"],
+    "bank_name": "Royal Bank of Bangladesh",
+    "branch_name": "Nizam Road Branch Chittagong",
+    "status": "approved",
+    "position": "Marketer"
+  },
+  {
+    "id": "03",
+    "holder_name": "Nazrul",
+    "account_number": "X-3453445655",
+    "currency": ["BDT", "USD", "URO"],
+    "bank_name": "Royal Bank of Bangladesh",
+    "branch_name": "Nizam Road Branch Chittagong",
+    "status": "approved",
+    "position": "Staff"
+  },
+  {
+    "id": "04",
+    "holder_name": "Rakibul",
+    "account_number": "X-34534562645",
+    "currency": ["BDT", "USD", "URO"],
+    "bank_name": "Royal Bank of Bangladesh",
+    "branch_name": "Nizam Road Branch Chittagong",
+    "status": "approved",
+    "position": "Web"
+  },
+  {
+    "id": "05",
+    "holder_name": "Rashma",
+    "account_number": "X-345345654645",
+    "currency": ["BDT", "USD", "URO"],
+    "bank_name": "Royal Bank of Bangladesh",
+    "branch_name": "Nizam Road Branch Chittagong",
+    "status": "approved",
+    "position": "Web"
+  },
+  {
+    "id": "06",
+    "holder_name": "Rudro",
+    "account_number": "X-345345654645",
+    "currency": ["BDT", "USD", "URO"],
+    "bank_name": "Royal Bank of Bangladesh",
+    "branch_name": "Nizam Road Branch Chittagong",
+    "status": "approved",
+    "position": "Marketer"
+  }
+]

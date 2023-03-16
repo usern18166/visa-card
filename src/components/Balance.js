@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import balance from "./balance.module.css";
-import { MdOutlineLibraryAdd } from "react-icons/md";
+
 import AddBeneficiaryModel from "./AddBeneficiaryModel";
 import Modal from "../modal/Modal";
 import SelectModal from "../SelectModal/SelectModal";
@@ -74,7 +74,7 @@ const Balance = () => {
           </div>
         </div>
 
-        <div className="">
+        <div>
           <div
             style={{
               display: "flex",
