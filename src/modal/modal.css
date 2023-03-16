@@ -61,17 +61,46 @@
     height: 40px;
     border: none;
     cursor: pointer;
+    background-color: rgb(224, 224, 226)
 }
 
 .accountCard {
-    width: 500px;
+    width: 90%;
     background-color: rgb(245, 245, 247);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    margin: 0 auto;
 }
 
-.listCard{
+.listCard {
+    display: flex;
     background-color: white;
     border: 1px solid rgb(237, 235, 235);
+ 
+    gap: 20px;
+    padding: 0px 0px 0px 10px;
+}
+
+.infoDetails {
+   width: 100%;
+   padding: 0px 10px;
+
+}
+
+.buildingIcon {
+    border: 1px solid rgb(211, 207, 215);
+    width: 60px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-top: 10px;
+}
+
+.nameInfo {
+    display: flex;
+    gap: 3px;
 }
