@@ -52,7 +52,7 @@ const List = () => {
                   backgroundColor: "white",
                   border: "1px solid white",
                 }}
-              >
+              > 
                 <SlArrowRight
                   style={{ height: "25px", width: "25px", color: "gray" }}
                 />

@@ -65,27 +65,30 @@
 }
 
 .accountCard {
-    width: 90%;
+    width: 1300px;
     background-color: rgb(245, 245, 247);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    position: absolute;
+    margin-left: -200px;
+    margin-top: -200px;
+
 }
 
 .listCard {
     display: flex;
     background-color: white;
     border: 1px solid rgb(237, 235, 235);
- 
     gap: 20px;
     padding: 0px 0px 0px 10px;
+    /* background-color: rebeccapurple */
 }
 
 .infoDetails {
-   width: 100%;
-   padding: 0px 10px;
-
+    width: 100%;
+    padding: 0px 10px;
 }
 
 .buildingIcon {

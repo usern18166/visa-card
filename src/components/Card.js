@@ -26,7 +26,7 @@ const Card = () => {
 
 
 
-        <div style={{ width: "400px", marginRight: "250px" }}>
+        <div style={{ width: "400px", marginRight: "250px",zIndex:"100" }}>
           <div className={card.card}>
             <div className={card.card_inner}>
               <div className={card.front}>
