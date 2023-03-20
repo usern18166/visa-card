@@ -36,8 +36,19 @@ const Modal = () => {
       {open ? (
         <div
           className="accountCard"
-          style={{ marginTop: "-350px", padding: "5px",zIndex:"200" }}
+          style={{ marginTop: "-350px", padding: "20px", zIndex: "200" }}
         >
+          <h6
+            onClick={handleOpen}
+            style={{
+              position: "absolute",
+              marginTop: "3px",
+              marginLeft: "1320px",
+              cursor: "pointer",
+            }}
+          >
+            X
+          </h6>
           {list.map((item) => (
             <div style={{}} className="listCard">
               <div className="buildingIcon">

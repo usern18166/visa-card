@@ -86,10 +86,13 @@
 .bankAccount {
     position: absolute;
     margin-top: 10px;
-    margin-left: -212px;
+    /* margin-left: 12px; */
     border: 1px solid rgb(224, 224, 226);
-    width: 400px;
+    width: 1300px;
     background-color: rgb(245, 245, 247);
+    margin-top: -350px;
+    z-index: 200;
+
 }
 
 /* selection  */
@@ -114,7 +117,7 @@ select::-ms-expand {
 }
 
 .selectOption {
-    width: 369px;
+    width: 1240px;
     border: none;
     border-bottom: 1px solid rgb(173, 171, 171);
     background-color: rgb(245, 245, 247);
@@ -135,12 +138,20 @@ select::-ms-expand {
     cursor: pointer;
 }
 
-.nextBtn{
+.nextBtn {
     text-transform: uppercase;
     background-color: #0048ba;
     color: white;
     width: 150px;
     height: 35px;
     border: #0048ba;
-   cursor: pointer;
+    cursor: pointer;
+}
+
+.option {
+    width: 500px;
+}
+
+.submitBtn{
+    
 }
